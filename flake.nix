@@ -14,10 +14,14 @@
   } @ inputs: let
     system = "x86_64-linux";
   in {
-    packages.${system}.nvim = let
-      nixvim' = nixvim.legacyPackages.${system};
-      config = import ./nvim.nix;
-    in
-      nixvim'.makeNixvim config;
+    packages.${system} = rec {
+      default = nvim;
+
+      nvim = let
+        nixvim' = nixvim.legacyPackages.${system};
+        config = import ./nvim.nix;
+      in
+        nixvim'.makeNixvim config;
+    };
   };
 }
