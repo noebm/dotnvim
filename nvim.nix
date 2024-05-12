@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   # colorschemes.tokyonight = {
   #   enable = true;
   #   style = "night";
@@ -6,7 +6,7 @@
 
   colorschemes.catppuccin = {
     enable = true;
-    flavour = "mocha";
+    settings.flavour = "mocha";
   };
 
   globals = {
@@ -19,7 +19,7 @@
     providers.wl-copy.enable = true;
   };
 
-  options = {
+  opts = {
     # shortmess += "c";
 
     number = true;
@@ -39,31 +39,28 @@
     # cmp-cmdline.enable = true;
     cmp-path.enable = true;
     cmp-treesitter.enable = true;
-    nvim-cmp = {
+    cmp = {
       enable = true;
 
-      snippet.expand = "snippy";
+      settings = {
+        sources = [
+          {name = "snippy";}
+          {name = "nvim_lsp";}
+          # {name = "nvim_lsp_document_symbol";}
+          # {name = "nvim_lsp_signature_help";}
+          {name = "buffer";}
+          # {name = "cmdline";}
+          {name = "path";}
+          {name = "treesitter";}
+        ];
 
-      sources = [
-        {name = "snippy";}
-        {name = "nvim_lsp";}
-        # {name = "nvim_lsp_document_symbol";}
-        # {name = "nvim_lsp_signature_help";}
-        {name = "buffer";}
-        # {name = "cmdline";}
-        {name = "path";}
-        {name = "treesitter";}
-      ];
+        mapping = {
+          "<CR>" = "cmp.mapping.confirm({ select = true })";
+          "<Tab>" = "cmp.mapping.select_next_item()";
+          "<S-Tab>" = "cmp.mapping.select_prev_item()";
+        };
 
-      # preliminary
-      mapping = {
-        "<CR>" = "cmp.mapping.confirm({ select = true })";
-        "<Tab>" = {
-          action = ''cmp.mapping.select_next_item()'';
-        };
-        "<S-Tab>" = {
-          action = ''cmp.mapping.select_prev_item()'';
-        };
+        snippet.expand = "function(args) require('snippy').expand_snippet(args.body) end";
       };
     };
   };
@@ -81,7 +78,6 @@
       withArgs = " {\"--profile\", \"black\"} ";
     };
     sources.formatting.alejandra.enable = true;
-    sources.formatting.rustfmt.enable = true;
   };
 
   plugins.lsp = {
@@ -168,8 +164,10 @@
 
   plugins.trouble = {
     enable = true;
-    autoOpen = true;
-    autoClose = true;
+    settings = {
+      auto_open = true;
+      auto_close = true;
+    };
   };
 
   # noice seems to cause delay [nixos-23.11]
@@ -181,7 +179,7 @@
   plugins.fugitive.enable = true;
   plugins.gitsigns = {
     enable = true;
-    attachToUntracked = false;
+    settings.attach_to_untracked = false;
   };
 
   plugins.illuminate = {
@@ -204,11 +202,23 @@
 
   # rust plugins
   plugins = {
-    rust-tools.enable = true;
+    rustaceanvim.enable = true;
     crates-nvim.enable = true;
   };
 
-  # agda
+  plugins.conform-nvim = {
+    enable = true;
+    formatOnSave = {
+      lspFallback = true;
+      timeoutMs = 500;
+    };
+    notifyOnError = true;
+    formattersByFt = {
+      rust = ["rustfmt"];
+    };
+  };
+
+  extraPackages = [pkgs.rustfmt];
 
   plugins.which-key = {
     enable = true;

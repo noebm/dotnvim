@@ -1,8 +1,8 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-23.11";
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -13,13 +13,14 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
   in {
     packages.${system} = rec {
       default = nvim;
 
       nvim = let
         nixvim' = nixvim.legacyPackages.${system};
-        config = import ./nvim.nix;
+        config = import ./nvim.nix {inherit pkgs;};
       in
         nixvim'.makeNixvim config;
     };
