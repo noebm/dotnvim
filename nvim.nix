@@ -69,7 +69,7 @@
   plugins.none-ls = {
     enable = true;
     # process delay in ms?
-    debounce = 100;
+    settings.debounce = 100;
 
     enableLspFormat = true;
     sources.formatting.black.enable = true;
@@ -147,7 +147,7 @@
   plugins.oil.enable = true;
 
   plugins.treesitter = {
-    ensureInstalled = [
+    settings.ensure_installed = [
       "python"
       "rust"
       "haskell"
