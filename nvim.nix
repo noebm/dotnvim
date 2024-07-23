@@ -75,7 +75,9 @@
     sources.formatting.black.enable = true;
     sources.formatting.isort = {
       enable = true;
-      withArgs = " {\"--profile\", \"black\"} ";
+      settings = {
+        args = " {\"--profile\", \"black\"} ";
+      };
     };
     sources.formatting.alejandra.enable = true;
   };
