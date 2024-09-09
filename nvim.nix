@@ -175,6 +175,8 @@
     };
   };
 
+  plugins.lean.enable = true;
+
   # noice seems to cause delay [nixos-23.11]
   plugins.noice.enable = true;
 
