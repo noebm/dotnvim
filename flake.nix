@@ -7,7 +7,7 @@
         nixpkgs.follows = "nixpkgs";
 
         # disable optional dependencies
-        nutschosSearch.follows = "";
+        nuschtosSearch.follows = "";
         devshell.follows = "";
         flake-compat.follows = "";
         git-hooks.follows = "";
