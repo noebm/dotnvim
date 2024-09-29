@@ -170,8 +170,12 @@
   plugins.trouble = {
     enable = true;
     settings = {
-      auto_open = true;
-      auto_close = true;
+      modes = {
+        diagnostics = { 
+          auto_open = true;
+          auto_close = true;
+        };
+      };
     };
   };
 
