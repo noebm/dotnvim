@@ -214,6 +214,10 @@
   # rust plugins
   plugins = {
     rustaceanvim.enable = true;
+    rustaceanvim.settings = {
+      server.default_settings.rust-analyzer.cargo.features = "all";
+    };
+
     crates-nvim.enable = true;
   };
 
