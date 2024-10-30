@@ -171,7 +171,7 @@
     enable = true;
     settings = {
       modes = {
-        diagnostics = { 
+        diagnostics = {
           auto_open = true;
           auto_close = true;
         };
