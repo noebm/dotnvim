@@ -9,6 +9,8 @@
     settings.flavour = "mocha";
   };
 
+  plugins.web-devicons.enable = true;
+
   globals = {
     mapleader = " ";
     maplocalleader = ",";
@@ -91,9 +93,14 @@
     # which has a CVE
     # servers.nixd.enable = true;
     servers.pyright.enable = true;
-    servers.hls.enable = true;
+    servers.hls = {
+      enable = true;
+      # hls requires ghc - this mutes the warning
+      # correct ghc version should be specified per project
+      installGhc = false;
+    };
     servers.bashls.enable = true;
-    servers.nil-ls.enable = true;
+    servers.nil_ls.enable = true;
     # servers.ccls.enable = true;
 
     keymaps = {
