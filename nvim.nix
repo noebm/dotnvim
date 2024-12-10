@@ -1,6 +1,7 @@
-{pkgs, ...}: {
+{...}: {
   imports = [
     ./llm.nix
+    ./language/rust.nix
   ];
 
   # colorschemes.tokyonight = {
@@ -219,32 +220,6 @@
   plugins.nvim-tree = {
     enable = true;
   };
-
-  # rust plugins
-  plugins = {
-    rustaceanvim.enable = true;
-    rustaceanvim.settings = {
-      server.default_settings.rust-analyzer.cargo.features = "all";
-    };
-
-    crates-nvim.enable = true;
-  };
-
-  plugins.conform-nvim = {
-    enable = true;
-    settings = {
-      format_on_save = {
-        lspFallback = true;
-        timeoutMs = 500;
-      };
-      notify_on_error = true;
-      formatters_by_ft = {
-        rust = ["rustfmt"];
-      };
-    };
-  };
-
-  extraPackages = [pkgs.rustfmt];
 
   plugins.which-key = {
     enable = true;
