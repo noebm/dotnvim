@@ -2,6 +2,7 @@
   imports = [
     ./llm.nix
     ./language/rust.nix
+    ./language/python.nix
   ];
 
   # colorschemes.tokyonight = {
@@ -79,16 +80,6 @@
     settings.debounce = 100;
 
     enableLspFormat = true;
-    sources.formatting.black.enable = true;
-    sources.formatting.isort = {
-      enable = true;
-      settings = {
-        extra_args = [
-          "--profile"
-          "black"
-        ];
-      };
-    };
     sources.formatting.alejandra.enable = true;
   };
 
@@ -97,7 +88,6 @@
     # causes 2.16.2 nix dependency
     # which has a CVE
     # servers.nixd.enable = true;
-    servers.pyright.enable = true;
     servers.hls = {
       enable = true;
       # hls requires ghc - this mutes the warning
@@ -165,7 +155,6 @@
 
   plugins.treesitter = {
     settings.ensure_installed = [
-      "python"
       "rust"
       "haskell"
     ];
