@@ -26,6 +26,23 @@
         };
       };
 
+      display = {
+        action_palette = {
+          opts = {
+            show_default_prompt_library = true;
+          };
+          provider = "default";
+        };
+        chat = {
+          window = {
+            layout = "vertical";
+            opts = {
+              breakindent = true;
+            };
+          };
+        };
+      };
+
       opts = {
         log_level = "TRACE";
         send_code = true;
