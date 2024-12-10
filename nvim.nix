@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  imports = [
+    ./llm.nix
+  ];
+
   # colorschemes.tokyonight = {
   #   enable = true;
   #   style = "night";
