@@ -155,7 +155,6 @@
 
   plugins.treesitter = {
     settings.ensure_installed = [
-      "rust"
       "haskell"
     ];
     enable = true;

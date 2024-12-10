@@ -24,5 +24,7 @@
     };
   };
 
+  plugins.treesitter.settings.ensure_installed = ["rust"];
+
   extraPackages = [pkgs.rustfmt];
 }
