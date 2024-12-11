@@ -3,6 +3,7 @@
     ./colorscheme.nix
     ./completion.nix
     ./formatting.nix
+    ./git.nix
     ./llm.nix
     ./lsp.nix
     ./language/rust.nix
@@ -54,11 +55,6 @@
   plugins.nvim-autopairs.enable = true;
 
   plugins.nix.enable = true;
-  plugins.fugitive.enable = true;
-  plugins.gitsigns = {
-    enable = true;
-    settings.attach_to_untracked = false;
-  };
 
   plugins.illuminate = {
     enable = true;
