@@ -1,8 +1,10 @@
 {...}: {
   imports = [
-    ./completion.nix
     ./colorscheme.nix
+    ./completion.nix
+    ./formatting.nix
     ./llm.nix
+    ./lsp.nix
     ./language/rust.nix
     ./language/haskell.nix
     ./language/python.nix
