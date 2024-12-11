@@ -1,20 +1,11 @@
 {...}: {
   imports = [
+    ./colorscheme.nix
     ./llm.nix
     ./language/rust.nix
     ./language/haskell.nix
     ./language/python.nix
   ];
-
-  # colorschemes.tokyonight = {
-  #   enable = true;
-  #   style = "night";
-  # };
-
-  colorschemes.catppuccin = {
-    enable = true;
-    settings.flavour = "mocha";
-  };
 
   plugins.web-devicons.enable = true;
 
