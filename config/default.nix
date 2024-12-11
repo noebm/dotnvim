@@ -33,15 +33,6 @@
 
   # plugins.cmp-conventionalcommits.enable = true;
 
-  plugins.none-ls = {
-    enable = true;
-    # process delay in ms?
-    settings.debounce = 100;
-
-    enableLspFormat = true;
-    sources.formatting.alejandra.enable = true;
-  };
-
   plugins.lsp = {
     enable = true;
     # causes 2.16.2 nix dependency
@@ -99,8 +90,6 @@
       };
     };
   };
-
-  plugins.lsp-format.enable = true;
 
   plugins.rainbow-delimiters.enable = true;
 
