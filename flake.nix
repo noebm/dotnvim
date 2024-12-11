@@ -31,7 +31,7 @@
 
       nvim = let
         nixvim' = nixvim.legacyPackages.${system};
-        config = import ./nvim.nix {inherit pkgs;};
+        config = import ./config {inherit pkgs;};
       in
         nixvim'.makeNixvim config;
     };
