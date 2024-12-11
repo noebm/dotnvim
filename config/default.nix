@@ -6,6 +6,7 @@
     ./git.nix
     ./llm.nix
     ./lsp.nix
+    ./project.nix
     ./language/rust.nix
     ./language/haskell.nix
     ./language/nix.nix
@@ -56,20 +57,6 @@
   plugins.nvim-autopairs.enable = true;
 
   plugins.illuminate = {
-    enable = true;
-  };
-
-  keymaps = [
-    {
-      action = "<cmd>NvimTreeToggle<CR>";
-      key = "<leader>p";
-      options = {
-        unique = true;
-        desc = "Toggle project tree";
-      };
-    }
-  ];
-  plugins.nvim-tree = {
     enable = true;
   };
 
