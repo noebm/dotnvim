@@ -1,9 +1,6 @@
 {
   plugins.lsp = {
     enable = true;
-    # causes 2.16.2 nix dependency
-    # which has a CVE
-    # servers.nixd.enable = true;
     servers.bashls.enable = true;
     servers.nil_ls.enable = true;
     # servers.ccls.enable = true;

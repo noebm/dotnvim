@@ -9,6 +9,5 @@
     settings.debounce = 100;
 
     enableLspFormat = true;
-    sources.formatting.alejandra.enable = true;
   };
 }

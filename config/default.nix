@@ -8,6 +8,7 @@
     ./lsp.nix
     ./language/rust.nix
     ./language/haskell.nix
+    ./language/nix.nix
     ./language/python.nix
   ];
 
@@ -53,8 +54,6 @@
   plugins.noice.enable = true;
 
   plugins.nvim-autopairs.enable = true;
-
-  plugins.nix.enable = true;
 
   plugins.illuminate = {
     enable = true;
