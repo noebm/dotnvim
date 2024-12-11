@@ -2,6 +2,7 @@
   imports = [
     ./llm.nix
     ./language/rust.nix
+    ./language/haskell.nix
     ./language/python.nix
   ];
 
@@ -88,12 +89,6 @@
     # causes 2.16.2 nix dependency
     # which has a CVE
     # servers.nixd.enable = true;
-    servers.hls = {
-      enable = true;
-      # hls requires ghc - this mutes the warning
-      # correct ghc version should be specified per project
-      installGhc = false;
-    };
     servers.bashls.enable = true;
     servers.nil_ls.enable = true;
     # servers.ccls.enable = true;
@@ -153,12 +148,7 @@
 
   plugins.oil.enable = true;
 
-  plugins.treesitter = {
-    settings.ensure_installed = [
-      "haskell"
-    ];
-    enable = true;
-  };
+  plugins.treesitter.enable = true;
   plugins.treesitter-context.enable = true;
 
   plugins.treesitter-refactor = {
