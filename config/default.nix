@@ -2,6 +2,7 @@
   imports = [
     ./colorscheme.nix
     ./completion.nix
+    ./filesystem.nix
     ./formatting.nix
     ./git.nix
     ./llm.nix
@@ -39,8 +40,6 @@
   # plugins.cmp-conventionalcommits.enable = true;
 
   plugins.rainbow-delimiters.enable = true;
-
-  plugins.oil.enable = true;
 
   plugins.treesitter.enable = true;
   plugins.treesitter-context.enable = true;
