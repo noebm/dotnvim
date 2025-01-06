@@ -6,7 +6,7 @@
       server.default_settings.rust-analyzer.cargo.features = "all";
     };
 
-    crates-nvim.enable = true;
+    crates.enable = true;
   };
 
   # FIXME separate formatter
