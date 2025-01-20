@@ -63,4 +63,15 @@
       };
     };
   };
+
+  keymaps = [
+    {
+      action = "<cmd>CodeCompanion /commit<CR>";
+      key = "<leader>cm";
+      options = {
+        unique = true;
+        desc = "Generate commit message via LLM";
+      };
+    }
+  ];
 }
