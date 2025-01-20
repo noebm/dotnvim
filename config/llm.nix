@@ -73,5 +73,13 @@
         desc = "Generate commit message via LLM";
       };
     }
+    {
+      action = "<cmd>CodeCompanionActions<CR>";
+      key = "<leader>ca";
+      options = {
+        unique = true;
+        desc = "List all LLM actions";
+      };
+    }
   ];
 }
