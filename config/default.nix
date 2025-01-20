@@ -50,7 +50,6 @@
     highlightDefinitions.enable = true;
   };
 
-  # noice seems to cause delay [nixos-23.11]
   plugins.noice.enable = true;
 
   plugins.nvim-autopairs.enable = true;
