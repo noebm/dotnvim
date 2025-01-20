@@ -50,7 +50,25 @@
     highlightDefinitions.enable = true;
   };
 
-  plugins.noice.enable = true;
+  plugins.noice = {
+    enable = true;
+    settings.lsp.override = {
+      "cmp.entry.get_documentation" = true;
+      "vim.lsp.util.convert_input_to_markdown_lines" = true;
+      "vim.lsp.util.stylize_markdown" = true;
+    };
+  };
+
+  # Noice needs `snacks.nvim` or `nvim-notify` for routes using the `notify` view
+  plugins.snacks = {
+    enable = true;
+    settings = {
+      notifier = {
+        enabled = true;
+        timeout = 3000;
+      };
+    };
+  };
 
   plugins.nvim-autopairs.enable = true;
 
