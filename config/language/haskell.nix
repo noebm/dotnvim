@@ -5,5 +5,4 @@
     # correct ghc version should be specified per project
     installGhc = false;
   };
-  plugins.treesitter.settings.ensure_installed = [ "haskell" ];
 }

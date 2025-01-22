@@ -42,7 +42,8 @@
   plugins.rainbow-delimiters.enable = true;
 
   plugins.treesitter.enable = true;
-  plugins.treesitter-context.enable = true;
+  # https://github.com/nvim-treesitter/nvim-treesitter/issues/5501
+  # plugins.treesitter-context.enable = true;
 
   plugins.treesitter-refactor = {
     enable = true;
