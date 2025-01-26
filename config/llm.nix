@@ -16,7 +16,7 @@
                   },
                   schema = {
                       model = {
-                          default = 'qwen2.5-coder:latest',
+                          default = "qwen2.5-coder:14b",
                           -- default = "llama3.1:8b-instruct-q8_0",
                       },
                       num_ctx = {
@@ -61,6 +61,9 @@
           adapter = "ollama";
         };
         inline = {
+          adapter = "ollama";
+        };
+        cmd = {
           adapter = "ollama";
         };
       };
