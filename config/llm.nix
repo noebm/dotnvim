@@ -1,4 +1,7 @@
 {
+  # requires treesitter
+  plugins.treesitter.enable = true;
+
   # enable llm based completions
   plugins.codecompanion = {
     enable = true;
