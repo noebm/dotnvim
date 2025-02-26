@@ -8,12 +8,6 @@
 
         # disable optional dependencies
         nuschtosSearch.follows = "";
-        devshell.follows = "";
-        flake-compat.follows = "";
-        git-hooks.follows = "";
-        home-manager.follows = "";
-        nix-darwin.follows = "";
-        treefmt-nix.follows = "";
       };
     };
   };
