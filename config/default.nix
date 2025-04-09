@@ -42,6 +42,7 @@
     shiftwidth = 2;
     expandtab = true;
     list = true;
+    swapfile = false;
   };
 
   # plugins.cmp-conventionalcommits.enable = true;
