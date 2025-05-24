@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   plugins = {
     rustaceanvim.enable = true;
     rustaceanvim.settings = {
@@ -19,10 +20,17 @@
       };
       notify_on_error = true;
       formatters_by_ft = {
-        rust = ["rustfmt"];
+        rust = [ "rustfmt" ];
       };
     };
   };
 
-  extraPackages = [pkgs.rustfmt];
+  plugins.which-key.settings.spec = [
+    {
+      __unkeyed-1 = "<leader>a";
+      __unkeyed-2 = "<cmd>RustLsp codeAction<CR>";
+    }
+  ];
+
+  extraPackages = [ pkgs.rustfmt ];
 }
