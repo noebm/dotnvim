@@ -47,7 +47,7 @@
 
   # plugins.cmp-conventionalcommits.enable = true;
 
-  # plugins.rainbow-delimiters.enable = true;
+  plugins.rainbow-delimiters.enable = true;
 
   # plugins.treesitter.enable = true;
   # https://github.com/nvim-treesitter/nvim-treesitter/issues/5501
