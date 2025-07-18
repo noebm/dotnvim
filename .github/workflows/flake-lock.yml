@@ -22,8 +22,8 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          
-          nix flake update --commit-lock-file
+
+          nix --option commit-lockfile-summary "chore(flake.lock): update dependencies" flake update --commit-lock-file
 
       - name: Check flake
         run: nix flake check
