@@ -16,7 +16,7 @@
                   },
                   schema = {
                       model = {
-                          default = 'qwen2.5-coder:14b',
+                          default = 'qwen3-coder:latest';
                           -- default = "llama3.1:8b-instruct-q8_0",
                       },
                       num_ctx = {
