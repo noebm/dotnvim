@@ -15,6 +15,7 @@
     ./language/haskell.nix
     ./language/nix.nix
     ./language/python.nix
+    ./language/godot.nix
   ];
 
   plugins.web-devicons.enable = true;
