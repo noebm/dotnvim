@@ -46,6 +46,11 @@
     swapfile = false;
   };
 
+  opts = {
+    title = true;
+    titlestring = "%t — Neovim";
+  };
+
   # plugins.cmp-conventionalcommits.enable = true;
 
   plugins.rainbow-delimiters.enable = true;
