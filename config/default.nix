@@ -10,6 +10,7 @@
     ./lsp.nix
     ./project.nix
     ./language/rust.nix
+    ./title.nix
     # ./language/lean.nix
     # ./language/kotlin.nix
     ./language/haskell.nix
@@ -44,11 +45,6 @@
     expandtab = true;
     list = true;
     swapfile = false;
-  };
-
-  opts = {
-    title = true;
-    titlestring = "%t — Neovim";
   };
 
   # plugins.cmp-conventionalcommits.enable = true;
