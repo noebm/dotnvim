@@ -7,26 +7,24 @@
     enable = true;
     settings = {
       adapters = {
-        ollama = {
-          __raw = ''
-            function()
-              return require('codecompanion.adapters').extend('ollama', {
-                  env = {
-                      url = "http://127.0.0.1:11434",
-                  },
-                  schema = {
-                      model = {
-                          default = 'qwen3-coder:latest';
-                          -- default = "llama3.1:8b-instruct-q8_0",
-                      },
-                      num_ctx = {
-                          default = 32768,
-                      },
-                  },
-              })
-            end
-          '';
-        };
+        http.ollama.__raw = ''
+          function()
+            return require('codecompanion.adapters').extend('ollama', {
+                env = {
+                    url = "http://127.0.0.1:11434",
+                },
+                schema = {
+                    model = {
+                        default = 'qwen3-coder:latest';
+                        -- default = "llama3.1:8b-instruct-q8_0",
+                    },
+                    num_ctx = {
+                        default = 32768,
+                    },
+                },
+            })
+          end
+        '';
       };
 
       display = {
