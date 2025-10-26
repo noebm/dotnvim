@@ -5,12 +5,15 @@
 
   autoCmd = [
     # Default value for setting title on startup.
+    # Note: This should only update the title when there is no file opened.
     {
       event = [ "VimEnter" ];
       desc = "Set default title at startup";
       callback.__raw = ''
         function()
-          vim.o.titlestring = "Neovim"
+          if vim.fn.argc() == 0 then
+            vim.o.titlestring = "Neovim"
+          end
         end
       '';
     }
