@@ -65,7 +65,7 @@
   plugins.treesitter-refactor = {
     enable = true;
     # highlightCurrentScope.enable = true;
-    highlightDefinitions.enable = true;
+    settings.highlight_definitions.enable = true;
   };
 
   # plugins.noice = {
