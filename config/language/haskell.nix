@@ -1,8 +1,9 @@
 {
-  plugins.lsp.servers.hls = {
+  plugins.haskell-tools = {
     enable = true;
-    # hls requires ghc - this mutes the warning
-    # correct ghc version should be specified per project
-    installGhc = false;
+    # lazyLoad.enable = true;
   };
+
+  # Note: haskell-tools requires telescope for hoogle search.
+  plugins.telescope.enable = true;
 }
