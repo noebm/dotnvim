@@ -5,5 +5,5 @@
   };
 
   # Note: haskell-tools requires telescope for hoogle search.
-  plugins.telescope.enable = true;
+  # plugins.telescope.enable = true;
 }

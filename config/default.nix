@@ -9,6 +9,7 @@
     ./llm.nix
     ./lsp.nix
     ./project.nix
+    ./search.nix
     ./language/rust.nix
     ./title.nix
     ./language/lean.nix
