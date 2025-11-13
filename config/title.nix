@@ -22,11 +22,13 @@
       desc = "Set window title dynamically based on project context";
       callback.__raw = ''
         function()
+          -- FIXME: cwd is relative to invocation
           local cwd = vim.fn.getcwd()
           local file = vim.fn.expand("%:t")
           local fullpath = vim.fn.expand("%:p")
 
           -- Try to find git root
+          -- FIXME: relative to invocation
           local git_root = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
           if git_root == nil or git_root == "" then
             local found = vim.fs.find({".git", ".hg", "package.json"}, { upward = true, path = fullpath })[1]
