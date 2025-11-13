@@ -11,7 +11,7 @@
     ./project.nix
     ./language/rust.nix
     ./title.nix
-    # ./language/lean.nix
+    ./language/lean.nix
     # ./language/kotlin.nix
     ./language/haskell.nix
     ./language/nix.nix
