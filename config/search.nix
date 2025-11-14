@@ -1,8 +1,9 @@
+{ lib, ... }:
 {
   plugins.telescope = {
     enable = true;
 
-    keymaps = {
+    keymaps = lib.mapAttrs (_: keydef: keydef // { options.unique = true; }) {
       "<leader>sd" = {
         action = "diagnostics";
         mode = "n";
