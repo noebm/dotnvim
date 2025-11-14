@@ -1,6 +1,7 @@
 {
   plugins.haskell-tools = {
     enable = true;
+    hlsPackage = null;
     # lazyLoad.enable = true;
   };
 
