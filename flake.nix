@@ -2,10 +2,6 @@
   inputs = {
     nixvim = {
       url = "github:nix-community/nixvim";
-      inputs = {
-        # disable optional dependencies
-        nuschtosSearch.follows = "";
-      };
     };
   };
   outputs =
