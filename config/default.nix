@@ -12,7 +12,9 @@
     ./search.nix
     ./language/rust.nix
     ./title.nix
-    ./language/lean.nix
+    # TODO: needs update due to lsp changes
+    # ./language/lean.nix
+
     # ./language/kotlin.nix
     ./language/haskell.nix
     ./language/nix.nix
