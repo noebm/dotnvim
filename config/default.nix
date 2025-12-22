@@ -6,7 +6,6 @@
     ./filesystem.nix
     ./formatting.nix
     ./git.nix
-    ./llm.nix
     ./lsp.nix
     ./project.nix
     ./search.nix
