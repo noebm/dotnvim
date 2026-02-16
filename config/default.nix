@@ -60,11 +60,13 @@
   # https://github.com/nvim-treesitter/nvim-treesitter/issues/5501
   # plugins.treesitter-context.enable = true;
 
-  plugins.treesitter-refactor = {
-    enable = true;
-    # highlightCurrentScope.enable = true;
-    settings.highlight_definitions.enable = true;
-  };
+  # DEPRECATED causes updates to fail
+  # TODO: see note for replacement https://github.com/nvim-treesitter/nvim-treesitter-refactor
+  # plugins.treesitter-refactor = {
+  #   enable = true;
+  #   # highlightCurrentScope.enable = true;
+  #   settings.highlight_definitions.enable = true;
+  # };
 
   # plugins.noice = {
   #   enable = true;
