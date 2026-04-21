@@ -1,4 +1,3 @@
-{ config, ... }:
 {
   plugins.lean.enable = true;
 
@@ -25,9 +24,5 @@
         desc = "Search Loogle";
       };
     }
-  ];
-
-  plugins.treesitter.grammarPackages = with config.plugins.treesitter.package.builtGrammars; [
-    lean
   ];
 }

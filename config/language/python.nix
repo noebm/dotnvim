@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 {
   plugins.none-ls.sources.formatting = {
     black.enable = true;
@@ -13,8 +13,4 @@
   };
 
   plugins.lsp.servers.pyright.enable = true;
-
-  plugins.treesitter.grammarPackages = with config.plugins.treesitter.package.builtGrammars; [
-    python
-  ];
 }

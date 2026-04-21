@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 {
   plugins = {
     rustaceanvim.enable = true;
@@ -33,8 +33,4 @@
   ];
 
   extraPackages = [ pkgs.rustfmt ];
-
-  plugins.treesitter.grammarPackages = with config.plugins.treesitter.package.builtGrammars; [
-    rust
-  ];
 }
