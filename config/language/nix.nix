@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   # filetype detection, indentation, syntax highlighting
   plugins.nix.enable = true;
@@ -13,4 +13,8 @@
   };
 
   extraPackages = [ pkgs.nixfmt ];
+
+  plugins.treesitter.grammarPackages = with config.plugins.treesitter.package.builtGrammars; [
+    nix
+  ];
 }
