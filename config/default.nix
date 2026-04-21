@@ -58,6 +58,11 @@
     highlight.enable = true;
     folding.enable = true;
   };
+
+  opts = {
+    foldlevel = 99;
+  };
+
   # https://github.com/nvim-treesitter/nvim-treesitter/issues/5501
   # plugins.treesitter-context.enable = true;
 
