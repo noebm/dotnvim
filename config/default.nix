@@ -55,7 +55,10 @@
 
   plugins.treesitter = {
     enable = true;
-    settings.highlight.enable = true;
+    settings = {
+      highlight.enable = true;
+      folding.enable = true;
+    };
   };
   # https://github.com/nvim-treesitter/nvim-treesitter/issues/5501
   # plugins.treesitter-context.enable = true;
