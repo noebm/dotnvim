@@ -21,6 +21,10 @@
     ./language/godot.nix
   ];
 
+  # Note: Enable nixvim unfree. This is separate because nixvim uses separate nixpkgs.
+  # https://github.com/nix-community/nixvim/issues/2147#issuecomment-2740559697
+  nixpkgs.config.allowUnfree = true;
+
   plugins.web-devicons.enable = true;
   plugins.mini = {
     enable = true;
