@@ -10,6 +10,7 @@
     ./project.nix
     ./search.nix
     ./language/rust.nix
+    ./language/wesl.nix
     ./language/wgsl.nix
     ./title.nix
     # TODO: needs update due to lsp changes
